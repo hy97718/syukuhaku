@@ -1,0 +1,38 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+@import 'bulma';
+@import 'bulma-extensions';
+.first-view {
+    background-image: url("https://rails-02-sample.herokuapp.com/assets/home/cover-lg.jpg");
+    height: 750px;
+    padding-top: 80px;
+    background-size: cover;
+    background-position: 50%;
+    width: 100%;
+    margin-bottom: 180px;
+}
+.container {
+    padding: 0 32px;
+}
+.first-view_title {
+    color: white;
+    font-family: Lato,sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 100px;
+    margin-bottom: 48px;
+    text-align: center;
+}
+.recommend-areas {
+    display: flex;
+}
+footer {
+    height: 465px;
+    margin-top: 260px;
+    background-color: black;
+    color: white;
+}
+.footer-image {
+    margin-top: 200px;
+}

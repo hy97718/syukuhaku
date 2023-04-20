@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+@import 'bulma';
+@import 'bulma-extensions';
+
+.notification:not(:last-child){
+    margin-bottom: 0;
+}
