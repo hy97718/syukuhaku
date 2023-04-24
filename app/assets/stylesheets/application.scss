@@ -19,3 +19,26 @@
 .notification:not(:last-child){
     margin-bottom: 0;
 }
+.section {
+    margin-top: 0;
+}
+  .header_menu .accordion_menu .accordion_header {
+    color: #fff;
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+  }
+  .header_menu .accordion_menu .accordion_header:hover {
+    opacity: .8;
+  }
+  .header_menu .accordion_menu .accordion_inner {
+    display: none;
+    background-color: #fff;
+    padding: 30px;
+    border: 1px solid black;
+  }
+  .header_menu .accordion_menu .accordion_inner p.link_menu {
+    margin: 0;
+  }
