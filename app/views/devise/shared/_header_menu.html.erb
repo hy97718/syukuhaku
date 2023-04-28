@@ -16,9 +16,9 @@
     </div>
     <div class="accordion_inner">
       <div class="box_menu">
+        <p class="link_menu"><%= link_to "施設の新規登録", new_room_path(current_user)%></p>
         <p class="link_menu">アコーディオンの中身です。</p>
-        <p class="link_menu">アコーディオンの中身です。</p>
-        <p class="link_menu">アコーディオンの中身です。</p>
+        <p class="link_menu"><%= link_to "登録施設一覧", rooms_path(current_user)%></p>
         <p class="link_menu">
             <%= link_to user_path(current_user) do %>
                 アカウント設定

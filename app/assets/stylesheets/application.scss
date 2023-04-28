@@ -16,6 +16,13 @@
 @import 'bulma';
 @import 'bulma-extensions';
 
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+.navbar {
+  background-color: rgb(1, 5, 68);
+}
 .notification:not(:last-child){
     margin-bottom: 0;
 }

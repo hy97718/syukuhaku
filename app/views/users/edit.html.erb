@@ -7,8 +7,9 @@
 <% end %>
 <%= form_with model: @user,local: true do |f| %>
   <div class="field">
-			<%= f.file_field :image, class: "file-input button is-light" %>
-			<i class="fas fa-upload"></i>&nbsp;&nbsp;&nbsp; 画像アップロード
+		<%= f.label :image %>
+    <i class="fas fa-upload"></i>
+		<%= f.file_field :image %>
   </div>
     <div class="field">
     <%= f.label :username, "ユーザー名", class: "label" %>

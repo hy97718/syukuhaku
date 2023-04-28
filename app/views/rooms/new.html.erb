@@ -1,0 +1,26 @@
+<%= form_with model: @room, local: true do |f| %>
+	<div class="field">
+		<%= f.label :title%>
+		<%= f.text_field :room_title, class: "input"%>
+	</div>
+	<div class="field">
+		<%= f.label "施設詳細"%>
+		<%= f.text_area :room_info, class: "textarea" %>
+	</div>
+	<div class="field">
+		<%= f.label "値段"%>
+		<%= f.text_field :room_price, class: "input" %>
+	</div>
+	<div class="field">
+		<%= f.label :address %>
+		<%= f.text_field :address, class: "input" %>
+	</div>
+
+	<div class="field">
+		<%= f.label :room_image %>
+		<%= f.file_field :room_image %>
+		<i class="fas fa-upload"></i> 画像アップロード
+	</div>
+
+	<%= f.submit "更新", class: "button is-success" %>
+<% end %>

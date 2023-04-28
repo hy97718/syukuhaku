@@ -1,0 +1,35 @@
+<div class="container">
+  <%= render '/devise/shared/search_form' %>
+  <div class="search-result">
+    <% if @search_word.present? %>
+      <h2>検索結果 "<%= @search_word %>"</h2>
+    <% elsif @search_area.present? %>
+      <h2>検索結果 "<%= @search_area %>"</h2>
+    <% else %>
+      <h2>全ての部屋</h2>
+    <% end %>
+    <%=  "#{@rooms.count}件が見つかりました" %>
+  </div>
+  <div class= "room-lists">
+    <% @rooms.each do |room| %>
+			<ul  class= "room-contents">
+				<li>
+          <% if room.room_image.attached? %>
+            <%= image_tag room.room_image.variant(resize: "300x300"),class:"room-image"%>
+          <% else %>
+            <%= image_tag 'hotel_image.png', size: "300x300",class:"room-image" %>
+          <% end %>
+          <div class="room-wrapper">
+            <p class="room-name"><%= room.room_title%></p>
+            <p class="room-address"><%= room.address%></p>
+            <p class="room-introduce"><%= room.room_info %><p>
+            <div class="room-footer">
+              <p><%= "¥#{room.room_price}~"%></p>
+              <%= link_to "詳細はこちら", room_path(room),class: "button is-info is-medium" %>
+            </div>
+          </div>
+				</li>
+			</ul>	
+    <% end %>
+  </div>
+</div>

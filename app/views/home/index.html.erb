@@ -5,25 +5,46 @@
       まだ体験のしたことない<br>
       旅をしよう<br>
     </h2>  
+    <%= render '/devise/shared/search_form' %>
   </div>
 </div>  
-<div class="container">
-  <div class="recommend-area">
+<div class="area-container">
+  <div class="area-title">
     <h2>おすすめのエリア</h2>
+  </div>
     <div class="recommend-areas">
-      <div>
-        <img src="https://rails-02-sample.herokuapp.com/assets/home/recommend-area/tokyo.jpg" alt="東京の写真" >
+      <div class= "area">
+        <%= link_to rooms_searches_path(area: '東京都'), class: "area-link tokyo" do%>
+          <p>
+            <i class="fas fa-map-marker-alt">Tokyo</i>
+          </p>
+          <span class="link-name">東京都</span>
+        <% end %>
       </div>
-      <div>
-        <img src="https://rails-02-sample.herokuapp.com/assets/home/recommend-area/osaka.jpg" alt="大阪の写真" >
+      <div class= "area">
+        <%= link_to rooms_searches_path(area: '大阪'), class: "area-link osaka" do%>
+          <p>
+            <i class="fas fa-map-marker-alt">Osaka</i>
+          </p>
+          <span class="link-name">大阪</span>
+        <% end %>
       </div>
-      <div>
-        <img src="https://rails-02-sample.herokuapp.com/assets/home/recommend-area/kyoto.jpg" alt="京都の写真" >
+      <div class= "area">
+        <%= link_to rooms_searches_path(area: '京都'), class: "area-link kyoto" do %>
+        <p>
+            <i class="fas fa-map-marker-alt">Kyoto</i>
+        </p>
+        <span class="link-name">京都</span>
+        <% end %>
       </div>
-      <div>
-        <img src="https://rails-02-sample.herokuapp.com/assets/home/recommend-area/sapporo.jpg" alt="札幌の写真" >
+      <div class= "area">
+        <%= link_to rooms_searches_path(area: '札幌'), class: "area-link sapporo" do%>
+        <p>
+            <i class="fas fa-map-marker-alt">Sapporo</i>
+        </p>
+        <span class="link-name">札幌</span>
+        <% end %>
       </div>
-    </div>
   </div>
 </div>  
 <footer>

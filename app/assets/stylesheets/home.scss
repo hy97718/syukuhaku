@@ -5,8 +5,9 @@
 @import 'bulma-extensions';
 .first-view {
     background-image: url("https://rails-02-sample.herokuapp.com/assets/home/cover-lg.jpg");
-    height: 750px;
+    height: auto;
     padding-top: 80px;
+    padding-bottom: 100px;
     background-size: cover;
     background-position: 50%;
     width: 100%;
@@ -24,13 +25,77 @@
     margin-bottom: 48px;
     text-align: center;
 }
+.area-container {
+    padding: 0 32px;
+    height: 800px;
+}
+.area-title {
+    margin: 15px;
+}
 .recommend-areas {
     display: flex;
 }
+.area {
+    width: 25%;
+    margin-right: 20px;
+
+}
+.link-name {
+    margin: 0 30px 0 30px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    color: rgb(11, 0, 72);
+}
+p > .fas {
+    margin: 40px 30px 0 30px;
+    font-size: 25px;
+    text-align: center;
+    color: rgb(11, 0, 72);
+
+}
+.area-link {
+    display: block;
+    height: 500px;
+    border-radius: 26px;
+}
+.tokyo {
+    background-image: url("tokyo.jpg");
+    background-size: cover;
+}
+.osaka {
+  background-image: url("osaka.jpg");
+  background-size: cover;
+}
+.kyoto {
+  background-image: url("kyoto.jpg");
+  background-size: cover;
+}
+.sapporo {
+  background-image: url("sapporo.jpg");
+  background-size: cover;
+}
+.search-forms {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    background-color: white;
+    opacity: 0.9;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+.search-field > p {
+    margin: 15px;
+    background-color: white;
+    text-align: center;
+    
+}
+
 footer {
     height: 465px;
     margin-top: 260px;
-    background-color: black;
+    background-color: rgb(1, 5, 68);
     color: white;
 }
 .footer-image {
