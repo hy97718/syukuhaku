@@ -10,6 +10,6 @@ class User < ApplicationRecord
   validates :username, presence: true
   validates :profile, length: { maximum: 50 }  
   validates :password, presence: true, confirmation: true, length: { in: 6..30 }, on: :acount_update
-  validates :password_confirmation, presence: true
+  validates :password_confirmation, presence: true, on: :acount_update
   validates :email, presence: true, uniqueness: true, on: :acount_update
 end
