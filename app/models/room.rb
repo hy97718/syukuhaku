@@ -1,6 +1,7 @@
 class Room < ApplicationRecord
   belongs_to :user
   has_one_attached :room_image
+  has_many :reservations
 
   validates :room_title, presence: true
   validates :room_info, presence: true, length: { maximum: 200 } 

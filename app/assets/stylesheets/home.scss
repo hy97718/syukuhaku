@@ -32,6 +32,14 @@
 .area-title {
     margin: 15px;
 }
+.area-title > h2 {
+    width: 350px;
+    font-size: 40px;
+    font-weight: 200;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: 3px solid rgb(73, 217, 253);
+    margin-bottom: 120px;
+}
 .recommend-areas {
     display: flex;
 }

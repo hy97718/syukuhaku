@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   end
   resources :rooms
 
+  resources :reservations
+  post 'reservations/confirm' , to: 'reservations#confirm', as: 'reservation_confirm'
 end

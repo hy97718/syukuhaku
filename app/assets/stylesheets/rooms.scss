@@ -45,6 +45,18 @@
     object-fit: cover;
     width: 100%;
   }
+  .room-details {
+    align-items: flex-start;
+    display: flex;
+    grid-gap: 40px;
+    gap: 40px;
+  }
+  .detail-body {
+    padding: 30px 50px;
+    background-color: rgb(235, 249, 255);
+    width: 100%;
+    border-radius: 10px;
+  }
   .room-name {
     font-size: 26px;
   }
@@ -70,4 +82,7 @@
 }
 .table {
   table-layout: fixed;
+}
+.room-container {
+  margin-top: 50px;
 }

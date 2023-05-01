@@ -47,11 +47,4 @@
       </div>
   </div>
 </div>  
-<footer>
-  <div class="container">
-    <%= link_to root_path do %>
-      <img class="footer-image" src="https://rails-02-sample.herokuapp.com/assets/common/logo.png" alt="Potepan Share" >
-    <% end %>
-    <p>Copyright © Potepan Share 2023 All rights reserved</p>
-  </div>
-</footer>
+<%= render '/devise/shared/footer' %>

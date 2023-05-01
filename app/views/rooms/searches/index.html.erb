@@ -24,7 +24,7 @@
             <p class="room-address"><%= room.address%></p>
             <p class="room-introduce"><%= room.room_info %><p>
             <div class="room-footer">
-              <p><%= "¥#{room.room_price}~"%></p>
+              <p><%= "¥#{room.room_price.to_s(:delimited)}~"%></p>
               <%= link_to "詳細はこちら", room_path(room),class: "button is-info is-medium" %>
             </div>
           </div>
