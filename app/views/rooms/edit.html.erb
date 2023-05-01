@@ -1,0 +1,37 @@
+<div class="container">
+	<div class="edit-container">
+		<%= form_with model: @room, local: true do |f| %>
+			<div class="field">
+				<%= f.label "施設名"%>
+				<%= f.text_field :room_title, class: "input"%>
+			</div>
+			<div class="field">
+				<%= f.label "施設詳細"%>
+				<%= f.text_area :room_info, class: "textarea" %>
+			</div>
+			<div class="field">
+				<%= f.label "値段"%>
+				<%= f.text_field :room_price, class: "input" %>
+			</div>
+			<div class="field">
+				<%= f.label "住所" %>
+				<%= f.text_field :address, class: "input" %>
+			</div>
+
+			<div class="field">
+				<% if @room.room_image.attached? %>
+						<%= image_tag @room.room_image.variant(resize: "300x300"), class:"image-content"%>
+						<% else %>
+						<%= image_tag 'hotel_image.png', size: "300x300" %>
+				<% end %>
+				<br><%= f.label "施設画像" %>
+				<i class="fas fa-upload"></i>
+				<%= f.file_field :room_image %>
+			</div>
+			
+			<%= f.submit "更新", class: "button is-success" %>
+			<%= link_to "キャンセル", :back, class: "button is-light" %>
+		<% end %>
+	</div>
+</div>
+<%= render '/devise/shared/footer' %>

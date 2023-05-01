@@ -1,0 +1,107 @@
+// Place all the styles related to the rooms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.search-result {
+  margin: auto;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.link-icon {
+    font-size: 26px;
+    font-weight: bold;
+    cursor: pointer;
+    transition-duration: 0.2s;
+  }
+
+  .room-link {
+    display: none;
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  .room-lists {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+  .room-contents {
+    display: block;
+    padding: 26px;
+    height: 100%;
+    width: 33.33%; //３つ均等に配置
+  }
+  .room-contents:last-child {
+    padding-right: 0;
+  }
+  .room-contents > li {
+    background-color: rgb(235, 249, 255);
+    border-radius: 26px;
+  }
+  .room-wrapper {
+    padding: 40px 24px;
+  }
+  .room-image {
+    aspect-ratio: 16/9;
+    border-radius: 26px 26px 0 0;
+    object-fit: cover;
+    width: 100%;
+  }
+  .room-details {
+    align-items: flex-start;
+    display: flex;
+    grid-gap: 40px;
+    gap: 40px;
+  }
+  .detail-body {
+    padding: 30px 50px;
+    background-color: rgb(235, 249, 255);
+    width: 100%;
+    border-radius: 10px;
+  }
+  .detail-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  .address {
+    margin-bottom: 15px;
+  }
+  .descrpiption {
+    letter-spacing: 1px;
+  }
+  .room-name {
+    font-size: 26px;
+  }
+  .room-address {
+    margin-bottom: 20px;
+  }
+  .room-introduce {
+  display: -webkit-box;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 24px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.room-footer {
+  display: flex;
+  justify-content: space-between;
+}
+.room-footer > p {
+  font-size: 26px;
+  vertical-align: middle;
+}
+.table {
+  table-layout: fixed;
+}
+.room-container {
+  margin-top: 50px;
+}
+.roomContainer-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}

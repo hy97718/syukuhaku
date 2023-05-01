@@ -1,0 +1,47 @@
+<div class="user_container">
+  <table class="table table is-fullwidth">
+	<tbody>
+		<tr>
+			<td>
+				<%= link_to "アカウント", user_acount_path%>
+			</td>
+			<td><%= link_to "プロフィール", user_profile_path%></td>
+		</tr>
+		<tr>
+			<td>
+        <%= link_to "アカウントの編集", user_acount_edit_path%>
+        <span class="icon">
+        <i class="fas fa-edit"></i>
+        </span>
+      </td>
+      <td>
+        <%= link_to "プロフィールの編集", edit_user_path%>
+        <span class="icon">
+        <i class="fas fa-edit"></i>
+        </span>
+      </td>
+
+		</tr>
+		<tr>
+			<td>アイコン画像</td>
+			<td>
+            <% if @user.image.attached? %>
+            <%= image_tag @user.image.variant(resize: "100x100"),class: "user-icon"%>
+            <% else %>
+            <%= image_tag 'no-image.png'%>
+            <% end %>
+            </td>
+		</tr>
+		<tr>
+			<td>名前</td>
+			<td><%= @user.username %></td>
+		</tr>
+		<tr>
+			<td>自己紹介</td>
+			<td><%= @user.profile %></td>
+		</tr>
+	</tbody>
+  </table>
+</div>
+
+

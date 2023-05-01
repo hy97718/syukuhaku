@@ -1,0 +1,70 @@
+<div class="first-view">
+  <div class="container">
+    <h2 class="first-view_title">
+      Potepan Shareで<br>
+      まだ体験のしたことない<br>
+      旅をしよう<br>
+    </h2>  
+    <div class="search-forms">
+      <%= form_with(url: rooms_searches_path, local: true, method: :get) do |f| %>
+      <div class="search-field">
+        <p class="control has-icons-left has-icons-right">
+        <%= f.text_field :area, placeholder: 'エリアから探す', class:  "input is-large"%>
+        <span class="icon is-large is-left">
+        <i class="fas fa-map-marker-alt"></i>
+        </span>
+        </p>
+      </div>
+      <div class="search-field">
+        <p class="control has-icons-left has-icons-right">
+        <%= f.text_field :keyword, placeholder: 'キーワードから探す', class: "input is-large"%>
+        <span class="icon is-large is-left">
+        <i class="fas fa-search"></i>
+        </span>
+        </p>
+      </div>
+      <%= f.submit "検索", class: "button is-info is-medium is-fullwidth" %>
+      <% end %>      
+    </div>
+  </div>
+</div>  
+<div class="area-container">
+  <div class="area-title">
+    <h2>おすすめのエリア</h2>
+  </div>
+    <div class="recommend-areas">
+      <div class= "area">
+        <%= link_to rooms_searches_path(area: '東京都'), class: "area-link tokyo" do%>
+          <p>
+            <i class="fas fa-map-marker-alt">Tokyo</i>
+          </p>
+          <span class="link-name">東京都</span>
+        <% end %>
+      </div>
+      <div class= "area">
+        <%= link_to rooms_searches_path(area: '大阪'), class: "area-link osaka" do%>
+          <p>
+            <i class="fas fa-map-marker-alt">Osaka</i>
+          </p>
+          <span class="link-name">大阪</span>
+        <% end %>
+      </div>
+      <div class= "area">
+        <%= link_to rooms_searches_path(area: '京都'), class: "area-link kyoto" do %>
+        <p>
+            <i class="fas fa-map-marker-alt">Kyoto</i>
+        </p>
+        <span class="link-name">京都</span>
+        <% end %>
+      </div>
+      <div class= "area">
+        <%= link_to rooms_searches_path(area: '札幌'), class: "area-link sapporo" do%>
+        <p>
+            <i class="fas fa-map-marker-alt">Sapporo</i>
+        </p>
+        <span class="link-name">札幌</span>
+        <% end %>
+      </div>
+  </div>
+</div>  
+<%= render '/devise/shared/footer' %>

@@ -1,0 +1,39 @@
+<div class="section header_menu">
+  <div class="accordion_menu">
+    <div class="accordion_header">
+      <% if current_user.image %>
+        <% if current_user.image.attached? %>
+          <%= image_tag current_user.image, class:"user-icon"%>
+        <% else %>
+          <%= image_tag 'no-image.png'%>
+        <% end %>   
+      <% end %>   
+      <%= current_user.username %>
+      <span class="icon is-small is-right">
+        <i class="fas fa-angle-down"></i>
+      </span>
+    </div>
+    <div class="accordion_inner">
+      <div class="box_menu">
+        <p class="link_menu"><%= link_to "施設の新規登録", new_room_path(current_user)%></p>
+        <p class="link_menu"><%= link_to "予約施設一覧", reservations_path(current_user)%></p>
+        <p class="link_menu"><%= link_to "登録施設一覧", rooms_path(current_user)%></p>
+        <p class="link_menu"><%= link_to "アカウント設定", user_path(current_user)  %></p>
+        <p class="link_menu">
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete%>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){
+  //.accordion_menuの中の.accordion_headerがクリックされたら
+  $('.header_menu .accordion_menu .accordion_header').click(function(){
+    //クリックされた.accordion_menuの中の.accordion_headerに隣接する.accordion_innerが開いたり閉じたりする。
+    $(this).next('.accordion_inner').slideToggle();
+    $(this).toggleClass("open");
+  });
+});
+</script>
+  

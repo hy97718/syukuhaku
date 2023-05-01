@@ -1,0 +1,37 @@
+<%= render '/devise/shared/search_form' %>
+<div class="container">
+	<div class="room-container">
+	<div class="roomContainer-header">
+		<%= link_to(:back) do %>
+  		<i class="fa fa-arrow-left"></i>
+  		戻る
+		<% end %>
+
+		<% if @room.user.id == current_user.id%>
+			<%= link_to edit_room_path(@room) do %>
+				<span class="icon">
+					<i class="fas fa-pen"></i>
+				</span>
+					編集
+			<% end %>
+		<% end %>
+	</div>
+		<div class="room-details">
+			<% if @room.room_image.attached? %>
+				<%= image_tag @room.room_image.variant(resize: "600x600"), class:"image-content"%>
+				<% else %>
+				<%= image_tag 'hotel_image.png', size: "600x600" %>
+			<% end %>
+			<div class="detail-body">
+				<div class="detail-header">
+					<p class="title has-text-grey is-size-3"><%= @room.room_title %></p>
+					<p class="title has-text-grey is-size-3"><%= "¥#{@room.room_price.to_s(:delimited)}円〜" %></p>
+				</div>
+				<p class="address has-text-grey has-text-weight-bold"><%= @room.address %><p>
+				<%= simple_format @room.room_info, class: "descrpiption has-text-weight-bold" %>
+				<%= render '/devise/shared/reservation_form' %>
+			</div>
+		</div>
+	</div>	
+</div>
+<%= render '/devise/shared/footer' %>
