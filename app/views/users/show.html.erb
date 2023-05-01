@@ -1,5 +1,4 @@
 <div class="user_container">
-  <h1>設定</h1>
   <table class="table table is-fullwidth">
 	<tbody>
 		<tr>
@@ -29,7 +28,7 @@
             <% if @user.image.attached? %>
             <%= image_tag @user.image.variant(resize: "100x100"),class: "user-icon"%>
             <% else %>
-            <img src="https://rails-02-sample.herokuapp.com/assets/common/default-avatar-7a6cbfd7993e89f24bfc888f4a035a83c6f1428b8bdc47eed9095f2799a40153.png" alt="画像がありません">
+            <%= image_tag 'no-image.png'%>
             <% end %>
             </td>
 		</tr>

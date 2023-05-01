@@ -1,5 +1,5 @@
+<%= render '/devise/shared/search_form' %>
 <div class="container">
-  <%= render '/devise/shared/search_form' %>
   <div class="search-result">
     <% if @search_word.present? %>
       <h2>検索結果 "<%= @search_word %>"</h2>
@@ -33,3 +33,4 @@
     <% end %>
   </div>
 </div>
+<%= render '/devise/shared/footer' %>

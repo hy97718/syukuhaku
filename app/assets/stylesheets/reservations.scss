@@ -9,3 +9,18 @@
   text-overflow: ellipsis;
   overflow: hidden;
 }
+.confirm-container {
+  width: 50%;
+  margin: 50px auto;
+  font-size: 30px;
+}
+.confirm-container > h1 {
+  margin-bottom: 30px;
+}
+.confirm-container > .field{
+  display: flex;
+  justify-content: space-between;
+}
+.button.is-success {
+  margin-bottom: 20px;
+}

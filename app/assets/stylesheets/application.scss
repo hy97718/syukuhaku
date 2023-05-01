@@ -29,23 +29,55 @@
 .section {
     margin-top: 0;
 }
-  .header_menu .accordion_menu .accordion_header {
-    color: #fff;
-    font-size: 26px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-    transition-duration: 0.2s;
-  }
-  .header_menu .accordion_menu .accordion_header:hover {
-    opacity: .8;
-  }
-  .header_menu .accordion_menu .accordion_inner {
-    display: none;
-    background-color: #fff;
-    padding: 30px;
-    border: 1px solid black;
-  }
-  .header_menu .accordion_menu .accordion_inner p.link_menu {
-    margin: 0;
-  }
+.header_menu .accordion_menu .accordion_header {
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+.header_menu .accordion_menu .accordion_header:hover {
+  opacity: .8;
+}
+.header_menu .accordion_menu .accordion_inner {
+  display: none;
+  background-color: #fff;
+  padding: 30px;
+  border: 1px solid black;
+}
+.header_menu .accordion_menu .accordion_inner p.link_menu {
+  margin: 0;
+}
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px 0;
+}
+.searchForm-header {
+  background-color: #dfe2e6;
+  display: flex;
+  justify-content: center;
+  height: 125px;
+  padding: 30px;
+}
+.searchForm-container {
+  display: flex;
+  justify-content: center;
+}
+.searchForm-field {
+  margin-right: 15px;
+}
+.searchForm-field > .button {
+  padding: 0 40px;
+}
+
+footer {
+	height: 465px;
+	margin-top: 260px;
+	background-color: rgb(1, 5, 68);
+	color: white;
+}
+.footer-image {
+  margin-top: 200px;
+}

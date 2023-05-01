@@ -1,35 +1,39 @@
-<h2 class="detail">設定</h2>
-<div class="table-container">
-	<table class="table-left">
-	<tbody>
-		<tr>
-			<td><%= link_to "アカウント", user_acount_path, class: "link-design"%></td>
-		</tr>
-		<tr>
-			<td><%= link_to "プロフィール", user_profile_path, class: "link-design" %></td>
-		</tr>
-	</tbody>
-	</table>
+<div class="container">
+	<h2 class="detail">設定</h2>
+	<div class="table-container">
+		<table class="table-left">
+		<tbody>
+			<tr>
+				<td><%= link_to "アカウント", user_acount_path, class: "link-design"%></td>
+			</tr>
+			<tr>
+				<td><%= link_to "プロフィール", user_profile_path, class: "link-design" %></td>
+			</tr>
+		</tbody>
+		</table>
 
-	<table class="table is-fullwidth">
-	<tbody>
-		<tr>
-			<td>アカウント</td>
-			<td>
-			<span class="icon">
-			<i class="fas fa-pen"></i>
-			</span>
-			<%= link_to "編集", user_acount_edit_path%> 
-			</td>
-		</tr>
-		<tr>
-			<td style="border-bottom: none;">メールアドレス</td>
-			<td style="border-bottom: none;"><%= @user.email %></td>
-		</tr>
-		<tr>
-			<td>パスワード</td>
-			<td><%= @user.password %>***********</td>
-		</tr>
-	</tbody>
-	</table>
+		<table class="table is-fullwidth">
+		<tbody>
+			<tr>
+				<td>アカウント</td>
+				<td>
+				<%= link_to user_acount_edit_path do %>
+					<span class="icon">
+						<i class="fas fa-pen"></i>
+					</span>
+						編集
+				<% end %>
+				</td>
+			</tr>
+			<tr>
+				<td style="border-bottom: none;">メールアドレス</td>
+				<td style="border-bottom: none;"><%= @user.email %></td>
+			</tr>
+			<tr>
+				<td>パスワード</td>
+				<td><%= @user.password %>***********</td>
+			</tr>
+		</tbody>
+		</table>
+	</div>
 </div>

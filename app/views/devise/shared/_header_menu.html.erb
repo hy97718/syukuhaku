@@ -1,12 +1,11 @@
 <div class="section header_menu">
-
   <div class="accordion_menu">
     <div class="accordion_header">
       <% if current_user.image %>
         <% if current_user.image.attached? %>
           <%= image_tag current_user.image, class:"user-icon"%>
         <% else %>
-          <img src="https://rails-02-sample.herokuapp.com/assets/common/default-avatar-7a6cbfd7993e89f24bfc888f4a035a83c6f1428b8bdc47eed9095f2799a40153.png" alt="画像がありません">
+          <%= image_tag 'no-image.png'%>
         <% end %>   
       <% end %>   
       <%= current_user.username %>
@@ -19,11 +18,7 @@
         <p class="link_menu"><%= link_to "施設の新規登録", new_room_path(current_user)%></p>
         <p class="link_menu"><%= link_to "予約施設一覧", reservations_path(current_user)%></p>
         <p class="link_menu"><%= link_to "登録施設一覧", rooms_path(current_user)%></p>
-        <p class="link_menu">
-            <%= link_to user_path(current_user) do %>
-                アカウント設定
-            <%end%>
-        </p>
+        <p class="link_menu"><%= link_to "アカウント設定", user_path(current_user)  %></p>
         <p class="link_menu">
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete%>
         </p>

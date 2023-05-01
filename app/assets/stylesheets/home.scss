@@ -4,72 +4,73 @@
 @import 'bulma';
 @import 'bulma-extensions';
 .first-view {
-    background-image: url("https://rails-02-sample.herokuapp.com/assets/home/cover-lg.jpg");
-    height: auto;
-    padding-top: 80px;
-    padding-bottom: 100px;
-    background-size: cover;
-    background-position: 50%;
-    width: 100%;
-    margin-bottom: 180px;
+	background-image: url("https://rails-02-sample.herokuapp.com/assets/home/cover-lg.jpg");
+	height: auto;
+	padding-top: 80px;
+	padding-bottom: 100px;
+	background-size: cover;
+	background-position: 50%;
+	width: 100%;
+	margin-bottom: 180px;
 }
 .container {
-    padding: 0 32px;
+	padding: 0 32px;
 }
 .first-view_title {
-    color: white;
-    font-family: Lato,sans-serif;
-    font-size: 80px;
-    font-weight: bold;
-    line-height: 100px;
-    margin-bottom: 48px;
-    text-align: center;
+	color: white;
+	font-family: Lato,sans-serif;
+	font-size: 80px;
+	font-weight: bold;
+	line-height: 100px;
+	margin-bottom: 48px;
+	text-align: center;
 }
 .area-container {
-    padding: 0 32px;
-    height: 800px;
+	padding: 0 32px;
+	height: 800px;
 }
 .area-title {
-    margin: 15px;
+	margin: 15px;
 }
 .area-title > h2 {
-    width: 350px;
-    font-size: 40px;
-    font-weight: 200;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    border-bottom: 3px solid rgb(73, 217, 253);
-    margin-bottom: 120px;
+	width: 350px;
+	font-size: 40px;
+	font-weight: 200;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	border-bottom: 3px solid rgb(73, 217, 253);
+	margin-bottom: 120px;
 }
 .recommend-areas {
-    display: flex;
+	display: flex;
 }
 .area {
-    width: 25%;
-    margin-right: 20px;
+	width: 25%;
+	margin-right: 20px;
 
 }
 .link-name {
-    margin: 0 30px 0 30px;
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    color: rgb(11, 0, 72);
+	margin: 0 30px 0 30px;
+	font-size: 25px;
+	font-weight: bold;
+	text-align: center;
+	color: rgb(11, 0, 72);
 }
 p > .fas {
-    margin: 40px 30px 0 30px;
-    font-size: 25px;
-    text-align: center;
-    color: rgb(11, 0, 72);
+	margin: 40px 30px 0 30px;
+	font-size: 25px;
+	text-align: center;
+	color: rgb(11, 0, 72);
+	letter-spacing: 1.5px;
 
 }
 .area-link {
-    display: block;
-    height: 500px;
-    border-radius: 26px;
+	display: block;
+	height: 500px;
+	border-radius: 26px;
 }
 .tokyo {
-    background-image: url("tokyo.jpg");
-    background-size: cover;
+	background-image: url("tokyo.jpg");
+	background-size: cover;
 }
 .osaka {
   background-image: url("osaka.jpg");
@@ -84,28 +85,17 @@ p > .fas {
   background-size: cover;
 }
 .search-forms {
-    text-align: center;
-    width: 50%;
-    margin: auto;
-    background-color: white;
-    opacity: 0.9;
-    padding: 20px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	background-color: white;
+	opacity: 0.9;
+	padding: 20px;
+	border: 1px solid lightgray;
+	border-radius: 5px;
 }
 .search-field > p {
-    margin: 15px;
-    background-color: white;
-    text-align: center;
-    
-}
-
-footer {
-    height: 465px;
-    margin-top: 260px;
-    background-color: rgb(1, 5, 68);
-    color: white;
-}
-.footer-image {
-    margin-top: 200px;
+	margin: 15px;
+	background-color: white;
+	text-align: center;
 }

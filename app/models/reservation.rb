@@ -16,7 +16,7 @@ class Reservation < ApplicationRecord
 
     validates :room_check_in, presence: true 
     validates :room_check_out, presence: true
-    validates :number_of_reserve, presence: true
+    validates :number_of_reserve, presence: true, numericality: {only_integer: true, greater_than_or_equal_to: 1}
     validate :in_out_check
 
 end

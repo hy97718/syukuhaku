@@ -1,21 +1,25 @@
-<div class="search-forms">
-  <%= form_with(url: rooms_searches_path, local: true, method: :get) do |f| %>
-  <div class="search-field">
-    <p class="control has-icons-left has-icons-right">
-    <%= f.text_field :area, placeholder: 'エリアから探す', class:  "input is-large"%>
-    <span class="icon is-large is-left">
-    <i class="fas fa-map-marker-alt"></i>
-    </span>
-    </p>
+<div class="searchForm-header">
+  <div class="searchForm-container">
+    <div class="searchForm-field">
+    <%= form_with(url: rooms_searches_path, local: true, method: :get) do |f| %>
+      <p class="control has-icons-left has-icons-right">
+      <%= f.text_field :area, placeholder: 'エリアから探す', class:  "input is-large"%>
+      <span class="icon is-large is-left">
+      <i class="fas fa-map-marker-alt"></i>
+      </span>
+      </p>
+    </div>  
+    <div class="searchForm-field">
+      <p class="control has-icons-left has-icons-right">
+      <%= f.text_field :keyword, placeholder: 'キーワードから探す', class: "input is-large"%>
+      <span class="icon is-large is-left">
+      <i class="fas fa-search"></i>
+      </span>
+      </p>
+    </div>
+    <div class="searchForm-field">
+    <%= f.submit "検索", class: "button is-info is-large mx-2" %>
+    </div>
+    <% end %>      
   </div>
-  <div class="search-field">
-    <p class="control has-icons-left has-icons-right">
-    <%= f.text_field :keyword, placeholder: 'キーワードから探す', class: "input is-large"%>
-    <span class="icon is-large is-left">
-    <i class="fas fa-search"></i>
-    </span>
-    </p>
-  </div>
-  <%= f.submit "検索", class: "button is-info is-medium is-fullwidth" %>
-  <% end %>      
 </div>
